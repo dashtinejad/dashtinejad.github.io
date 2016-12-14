@@ -1,1 +1,64 @@
-Mojtaba Dashtinejad
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mojtaba Dashtinejad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./jquery-3.1.1.min.js"></script>
+  <meta name="description" content="Senior Frontend Engineer" />
+  <meta name="keywords" content="frontend, react, redux, jquery, javascript, ecmascript, es6, es7, mojtaba, dashtinejad" />
+  <link rel="canonical" href="https://dashtinejad.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mojtaba Dashtinejad" />
+  <meta property="og:description" content="Senior Frontend Engineer" />
+  <meta property="og:url" content="https://dashtinejad.github.io/" />
+  <meta property="og:image" content="./dashtinejad.jpg" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    
+  <div id="bar"></div>
+
+  <div class="wrapper">
+    <div class="iwrapper">
+      <div class="avatar-wrapper"><img src="./dashtinejad.jpg" alt="Mojtaba Dashtinejad" width="250" height="250" /></div>
+      <h1><a href="http://stackoverflow.com/story/dashtinejad">Mojtaba Dashtinejad</a></h1>
+      <h2>Senior Frontend Engineer</h2>
+
+      <div class="network-account">
+        <div class="favicon-stackoverflow" title="Stack Overflow"></div>
+        <span class="score" id="stackoverflow-score"></span>
+        <script>
+          (function () {
+            function kFormatter(num) {
+              return num > 999 ? (num/1000).toFixed(1) + 'k' : num
+            }
+
+            $.get('https://api.stackexchange.com/2.2/users/3971911?order=desc&sort=reputation&site=stackoverflow').done(function (response) {
+              var reputation = response.items[0].reputation;
+              $('#stackoverflow-score').text(kFormatter(reputation));
+            });
+          }());
+        </script>
+      </div>
+
+      <hr />
+
+      <div>
+        <a href="http://stackoverflow.com/story/dashtinejad"><img src="./stackoverflow-32.png" alt="StackOverflow" /></a>
+        &nbsp;
+        <a href="https://github.com/dashtinejad"><img src="./github-32.png" alt="GitHub" /></a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
