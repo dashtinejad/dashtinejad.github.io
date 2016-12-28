@@ -31,8 +31,8 @@
       <h1><a href="http://stackoverflow.com/story/dashtinejad">Mojtaba Dashtinejad</a></h1>
       <h2>Senior Frontend Engineer</h2>
 
-      <div class="network-account">
-        <div class="favicon-stackoverflow" title="Stack Overflow"></div>
+      <div class="network-account" style="min-width: 100px;">
+        <img height="16" src="./stackoverflow-com.svg" alt="StackOverflow" style="position: relative; top: 3px;" />
         <span class="score" id="stackoverflow-score" style="position: relative; top: 1px;"></span>
         <script>
           (function () {
@@ -41,19 +41,19 @@
             }
 
             $.get('https://api.stackexchange.com/2.2/users/3971911?order=desc&sort=reputation&site=stackoverflow').done(function (response) {
-              var reputation = response.items[0].reputation;
-              $('#stackoverflow-score').text(kFormatter(reputation));
-            });
-          }());
+              var reputation = response.items[0].reputation
+              $('#stackoverflow-score').text(kFormatter(reputation))
+            })
+          }())
         </script>
       </div>
 
       <hr />
 
       <div>
-        <a href="http://stackoverflow.com/story/dashtinejad"><img src="./stackoverflow-32.png" alt="StackOverflow" /></a>
+        <a href="http://stackoverflow.com/story/dashtinejad"><img height="32" src="./stackoverflow-com.svg" alt="StackOverflow" /></a>
         &nbsp;
-        <a href="https://github.com/dashtinejad"><img src="./github-32.png" alt="GitHub" /></a>
+        <a href="https://github.com/dashtinejad"><img height="32" src="./github-logo.svg" alt="GitHub" /></a>
       </div>
     </div>
   </div>
